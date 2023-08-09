@@ -59,7 +59,7 @@ const Home = () => {
         <br /><br />
         {/* Proejct Section */}
         <div className="flex flex-col items-center justify-center md:mt-6">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Projects</h2><br />
+          <h2 className="text-2xl md:text-3xl font-semibold mb-8">Projects</h2>
           <div className="gap-4 mx-auto">
             {projectInfo.map((project, index) => (
               <Project key={index} {...project} />
