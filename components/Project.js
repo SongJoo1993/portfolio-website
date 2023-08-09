@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Project ({ name, description, imageSrc, frontendStack, backendStack, sourceCodeLink, liveDemoLink }) {
     return (
       <div className="bg-white rounded-lg shadow-md p-6 mb-6 flex md:flex-row md:w-50rem lg:w-50rem items-center">
-        <div className="md:w-1/3 md:pr-6">
+        <div className="hidden md:block d:w-1/3 md:pr-6">
           <Image src={imageSrc} alt={name} width={400} height={250} />
         </div>
         <div className="md:w-2/3">
@@ -14,8 +14,8 @@ export default function Project ({ name, description, imageSrc, frontendStack, b
             <div className="text-sm text-gray-700 mb-4">
                 <h5 className="font-semibold">Stacks:</h5>
                 <ul className="list-disc pl-6">
-                  <li className="mr-2">Frontend: {frontendStack}</li>
-                  <li className="mr-2">Backend: {backendStack}</li>
+                  <li className="mr-2">Front-end: {frontendStack}</li>
+                  <li className="mr-2">Back-end : {backendStack}</li>
                 </ul>
             </div>
             {/* Feature */}

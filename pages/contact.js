@@ -10,10 +10,10 @@ const Contact = () => {
   const onSubmit = async () => {
     try {
       await emailjs.sendForm(
-        'service_jxpfvbi', // Replace with your EmailJS service ID
-        'template_5139kke', // Replace with your EmailJS template ID
+        'service_jxpfvbi',
+        'template_5139kke',
         form.current,
-        'Zs1Y6z64zaVi51jrC' // Replace with your EmailJS user ID
+        'Zs1Y6z64zaVi51jrC'
       );
 
       setNotification({ type: 'success', message: 'Email sent successfully!' });
@@ -31,8 +31,8 @@ const Contact = () => {
   };
 
   return (
-    <>
-     <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
         <h1 className="text-2xl font-semibold mb-4">Contact Me</h1>
         <form ref={form} onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
@@ -46,7 +46,7 @@ const Contact = () => {
             {errors?.from_name && <span className="text-red-600">Name is required</span>}
           </div>
           <div className="mb-4">
-            <label className="block text-gray-800">Email</label>
+            <label className="block text-gray-800">From <span className='text-xs'>(Your email)</span></label>
             <input
               type="email"
               name="email"
@@ -66,25 +66,26 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+            className="bg-black text-white px-4 py-2 rounded-md hover:bg-blue-600"
           >
             Send
           </button>
         </form>
         {notification && (
-            <div
-                className={`m-4 mb-4 ${
-                notification.type === 'success' ? 'bg-black text-white' : 'bg-red-500 text-white'
-                } p-2 rounded-lg`}
-            >
-                <p>{notification.message}</p>
-                <button className="font-semibold mt-1" onClick={handleNotificationClose}>
-                Close
-                </button>
-            </div>
+          <div
+            className={`mt-4 p-2 rounded-lg ${
+              notification.type === 'success' ? 'bg-black text-white' : 'bg-red-500 text-white'
+            }`}>
+            <p>{notification.message}</p>
+            <button
+              className="font-semibold mt-1 text-sm text-white hover:underline"
+              onClick={handleNotificationClose}>
+              Close
+            </button>
+          </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

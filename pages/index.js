@@ -1,18 +1,24 @@
 import React from 'react';
 import Image from 'next/image';
+import { useSpring, animated } from 'react-spring';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoMdDownload } from 'react-icons/io';
 import projectInfo from '@/data/projectinfo';
 import Project from '@/components/Project';
 
-const Home = () => {
+export default function Home () {
+  const downloadButtonAnimation = useSpring({
+    opacity: 1,
+    from: { opacity: 0.8 },
+  });
+
   return (
     <div className='min-h-screen bg-gray-100'>
       <main className="container mx-auto px-4 py-8 md:py-16 lg:py-20">
         <div className="flex flex-col md:flex-row">
           {/* Image Section (Mobile First) */}
           <div className="hidden md:block md:w-1/2 md:pr-8 order-2 md:order-1 text-center mb-6 md:mb-0 md:mt-0">
-            <div className="w-48 h-48 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden">
+            <div className="w-40 h-40 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden">
               <Image
                 src="/my-pic.jpg"
                 alt="Profile Picture"
@@ -50,8 +56,10 @@ const Home = () => {
                 download
                 className="text-gray-600 hover:text-gray-800"
               >
-                <IoMdDownload size={24} className="inline-block mr-1" />
-                Download Resume
+                <animated.div style={downloadButtonAnimation}>
+                  <IoMdDownload size={24} className="inline-block mr-1" />
+                  Download Resume
+                </animated.div>
               </a>
             </div>
           </div>
@@ -70,5 +78,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
