@@ -24,9 +24,9 @@ const Home = () => {
           {/* Text Section */}
           <div className="md:w-1/2 md:pr-8 order-1 md:order-2">
             <h1 className="text-2xl md:text-3xl font-semibold mb-4">Hi There!</h1>
-            <h3 className="text-2xl md:text-3xl font-semibold mb-4">I'm Song Joo and your future colleague 😊</h3>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4">I&apos;m Song Joo and your future colleague 😊</h3>
             <p className="text-gray-600 leading-relaxed">
-              I'm a junior web developer who is passionate about <strong>problem-solving</strong> and views each coding challenge as <strong>an opportunity</strong> to enhance my skills and contribute creative solutions.
+              I&apos;m a junior web developer who is passionate about <strong>problem-solving</strong> and views each coding challenge as <strong>an opportunity</strong> to enhance my skills and contribute creative solutions.
             </p>
             <div className="flex mt-4 md:mt-6">
               <a
