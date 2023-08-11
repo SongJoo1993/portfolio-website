@@ -32,7 +32,7 @@ export default function Home () {
             <h1 className="text-2xl md:text-3xl font-semibold mb-4">Hi There!</h1>
             <h3 className="text-2xl md:text-3xl font-semibold mb-4">I&apos;m Song Joo and your future colleague 😊</h3>
             <p className="text-gray-600 leading-relaxed">
-              I&apos;m a junior web developer who is passionate about <strong>problem-solving</strong> and views each coding challenge as <strong>an opportunity</strong> to enhance my skills and contribute creative solutions.
+              Fueled by a growth mindset, I thrive on challenges and leverage my proficiency in web development to make impactful contributions as a junior developer!
             </p>
             <div className="flex mt-4 md:mt-6">
               <a

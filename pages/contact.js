@@ -26,7 +26,7 @@ const Contact = () => {
   const handleNotificationClose = () => {
     setNotification(null);
     if (notification.type === 'success') {
-      form.current.reset(); // Clear the form
+      form.current.reset();
     }
   };
 

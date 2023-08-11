@@ -2,8 +2,9 @@ import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import Image from 'next/image';
 
-export default function Project ({ name, description, imageSrc, frontendStack, backendStack, sourceCodeLink, liveDemoLink }) {
-    return (
+export default function Project ({ name, description, imageSrc, frontendStack, backendStack, sourceCodeLink, liveDemoLink, keyFeatures }) {
+  console.log(keyFeatures);
+  return (
       <div className="bg-white rounded-lg shadow-md p-6 mb-6 flex md:flex-row md:w-50rem lg:w-50rem items-center">
         <div className="hidden md:block d:w-1/3 md:pr-6">
           <Image src={imageSrc} alt={name} width={400} height={250} />
@@ -18,16 +19,15 @@ export default function Project ({ name, description, imageSrc, frontendStack, b
                   <li className="mr-2">Back-end : {backendStack}</li>
                 </ul>
             </div>
-            {/* Feature */}
-            <div className="text-sm text-gray-700 mb-4">
+            {/* Feature */} 
+            {keyFeatures && (
+              <div className="text-sm text-gray-700 mb-4">
               <h5 className="font-semibold">Key Features:</h5>
               <ul className="list-disc pl-6">
-                  <li>Built a full-stack web application with Next.js, React Bootstrap, Node.js, Express.js, and MongoDB.</li>
-                  <li>Quick/Advanced search with dynamic search queries</li>
-                  <li>Constructed and maintained RESTful APIs with filtering, sorting, paginating, and standard error codes for a seamless user experience.</li>
-                  <li>Employed JWT and Passport to establish a token-based user authentication and authorization process to ensure data privacy.</li>
+                  { keyFeatures.map((elm,index) => (<li key={index}>{elm}</li>))}
               </ul>
             </div>
+            )}
             <a
               href={sourceCodeLink}
               target="_blank"
