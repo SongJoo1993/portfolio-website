@@ -1,12 +1,12 @@
+import { motion } from "framer-motion"
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import Image from 'next/image';
 
 export default function Project ({ name, description, imageSrc, frontendStack, backendStack, sourceCodeLink, liveDemoLink, keyFeatures }) {
-  console.log(keyFeatures);
   return (
       <div className="bg-white rounded-lg shadow-md p-6 mb-6 flex md:flex-row md:w-50rem lg:w-50rem items-center">
-        <div className="hidden md:block d:w-1/3 md:pr-6">
+        <div className="hidden md:block w-1/3 md:pr-6">
           <Image src={imageSrc} alt={name} width={400} height={250} />
         </div>
         <div className="md:w-2/3">
@@ -28,22 +28,30 @@ export default function Project ({ name, description, imageSrc, frontendStack, b
               </ul>
             </div>
             )}
-            <a
-              href={sourceCodeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300"
-            >
-              <FaGithub className="mr-1" size={18} /> View Source Code
-            </a>
-            <a
-              href={liveDemoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300"
-            >
-              <FiExternalLink className="mr-1" size={18} /> View Live Demo
-            </a>
+            <motion.div 
+            className="w-1/3 my-3"
+            whileHover={{ scale: 1.1}}>
+              <a
+                href={sourceCodeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300"
+              >
+                <FaGithub className="mr-1" size={18} /> View Source Code
+              </a>
+            </motion.div>
+            <motion.div 
+            className="w-1/3 my-3"
+            whileHover={{ scale: 1.1}}>
+              <motion.a
+                href={liveDemoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300"
+              >
+                <FiExternalLink className="mr-1" size={18} /> View Live Demo
+              </motion.a>
+            </motion.div>
         </div>
       </div>
     );
