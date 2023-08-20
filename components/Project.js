@@ -29,8 +29,9 @@ export default function Project ({ name, description, imageSrc, frontendStack, b
             </div>
             )}
             <motion.div 
-            className="w-1/3 my-3"
-            whileHover={{ scale: 1.1}}>
+              className="w-1/3 my-3"
+              whileHover={{ scale: 1.1, originX: 0}
+            }>
               <a
                 href={sourceCodeLink}
                 target="_blank"
@@ -40,9 +41,10 @@ export default function Project ({ name, description, imageSrc, frontendStack, b
                 <FaGithub className="mr-1" size={18} /> View Source Code
               </a>
             </motion.div>
-            <motion.div 
-            className="w-1/3 my-3"
-            whileHover={{ scale: 1.1}}>
+            <motion.div
+              className="w-1/3 my-3"
+              whileHover={{ scale: 1.1, originX: 0}}
+            >
               <motion.a
                 href={liveDemoLink}
                 target="_blank"
