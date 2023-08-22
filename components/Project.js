@@ -10,7 +10,7 @@ export default function Project ({ name, description, imageSrc, frontendStack, b
           <Image src={imageSrc} alt={name} width={400} height={250} />
         </div>
         <div className="md:w-2/3">
-            <h4 className="text-lg font-semibold mb-4">{name}</h4>
+            <h1 className="text-2xl font-semibold mb-4">{name}</h1>
             <p className="text-gray-600 mb-4">{description}</p>
             <div className="text-sm text-gray-700 mb-4">
                 <h5 className="font-semibold">Stacks:</h5>
@@ -41,19 +41,21 @@ export default function Project ({ name, description, imageSrc, frontendStack, b
                 <FaGithub className="mr-1" size={18} /> View Source Code
               </a>
             </motion.div>
-            <motion.div
-              className="w-1/3 my-3"
-              whileHover={{ scale: 1.1, originX: 0}}
-            >
-              <motion.a
-                href={liveDemoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300"
+            {liveDemoLink && (
+              <motion.div
+                className="w-1/3 my-3"
+                whileHover={{ scale: 1.1, originX: 0}}
               >
-                <FiExternalLink className="mr-1" size={18} /> View Live Demo
-              </motion.a>
-            </motion.div>
+                <motion.a
+                  href={liveDemoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300"
+                >
+                  <FiExternalLink className="mr-1" size={18} /> View Live Demo
+                </motion.a>
+              </motion.div>
+            )}
         </div>
       </div>
     );
