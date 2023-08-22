@@ -21,7 +21,7 @@ const projectInfo = [
     ,{
       name: 'Simple POS',
       description: 'A full-stack Point of Sales application designed for a sushi restaurant to manage orders and inventory items.',
-      imageSrc: '/project2-img.jpg',
+      imageSrc: '/simple-pos.jpg',
       frontendStack: 'React.js, Sass ',
       backendStack: 'Node.js, Express.js , MySQL',
       sourceCodeLink: 'https://github.com/SongJoo1993/SimplePos',
