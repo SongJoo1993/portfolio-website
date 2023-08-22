@@ -6,7 +6,6 @@ import { IoMdDownload } from 'react-icons/io';
 import projectInfo from '@/data/projectinfo';
 import Project from '@/components/Project';
 import Contact from '@/components/Contact';
-import Carousel from 'react-bootstrap/Carousel';
 
 export default function Home () {
   return (
