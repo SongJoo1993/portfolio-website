@@ -8,7 +8,7 @@ const projectInfo = [
       frontendStack: 'Next.js, BootStrap, Jotai',
       backendStack: 'Node.js, Express.js , MongoDB, Passport, JWT',
       sourceCodeLink: 'https://github.com/SongJoo1993/FlickScout',
-      liveDemoLink: 'https://animated-kashata-8b339e.netlify.app',
+      liveDemoLink: 'https://flickscout.netlify.app',
       keyFeatures: [
         "Quick search by title is implemented.",
         "Advanced search with dynamic search queries is implemented.",

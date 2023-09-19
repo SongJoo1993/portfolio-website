@@ -19,7 +19,7 @@ export default function MainNavigation() {
             </Link>
         </li>
         <li className="w-12">
-            <a href="Song_Joo_Resume.pdf" download>
+            <a href="Resume.pdf" download>
               <motion.button
               whileHover={{
                 scale: 1.2,

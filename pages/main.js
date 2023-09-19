@@ -71,7 +71,7 @@ export default function Home () {
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.2, originX: 0}}
-                href="Song_Joo_Resume.pdf"
+                href="Resume.pdf"
                 download
                 className="text-gray-600 hover:text-gray-800"
                 >
